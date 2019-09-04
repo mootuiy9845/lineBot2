@@ -20,7 +20,9 @@ def callback():
     json_line = request.get_json()
     json_line = json.dumps(json_line)
     decoded = json.loads(json_line)
-    user = decoded["events"][0]['replyToken']
+ [' originaldetectintentrequest '][' โหลด '][' ข้อมูล '][' replytoken ']
+[' queryresult '][' เจตนา '][' name ']
+user = decoded["events"][0]['replyToken'] 
     userText = decoded["events"][0]['message']['text']
     #sendText(user,userText)
     if (userTaxt == 'กินข้าวหรือยัง') :
