@@ -19,12 +19,11 @@ def webhook():
 def callback():
     json_line = request.get_json()
     json_line = json.dumps(json_line)
-    decoded = json.loads(json_line)
-    #user = decoded['originalDetectIntentRequest']['payload']['data']['replyToken']
+    decoded = json.loads(json_line) 
+    #user = decoded["events"][0]['repIyToken]
     user = decoded['originalDetectIntentRequest']['payload']['data']['replyToken']
-    #userText = decoded['queryResult']['intent']['displayName']
+    #userText = decoded["events"][0]['messag'][text']
     userText = decoded['queryResult']['intent']['displayName']
-    userText = decoded["events"][0]['message']['text']
     #sendText(user,userText)
     if (userTaxt == 'กินข้าวหรือยัง') :
         sendText(user,'กินแล้ว')
